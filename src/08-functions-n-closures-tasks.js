@@ -23,8 +23,8 @@
  *   getComposition(Math.sin, Math.asin)(x) => Math.sin(Math.asin(x))
  *
  */
-function getComposition(/* f, g */) {
-  throw new Error('Not implemented');
+function getComposition(a, b) {
+  return (x) => a(b(x));
 }
 
 
@@ -44,10 +44,10 @@ function getComposition(/* f, g */) {
  *   power05(16) => 4
  *
  */
-function getPowerFunction(/* exponent */) {
-  throw new Error('Not implemented');
+function getPowerFunction(exponent) {
+  const a = exponent;
+  return (i) => i ** a;
 }
-
 
 /**
  * Returns the polynom function of one argument based on specified coefficients.
